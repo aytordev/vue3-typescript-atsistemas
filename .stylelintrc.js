@@ -6,4 +6,4 @@ module.exports = {
     'stylelint-config-css-modules', // configure for CSS Modules methodology
     'stylelint-config-prettier', // turn off any rules that conflict with Prettier
   ],
-}
+};

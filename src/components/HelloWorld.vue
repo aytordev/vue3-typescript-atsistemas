@@ -1,9 +1,9 @@
 <script setup lang="ts">
-  import { defineProps, ref } from 'vue'
+  import { defineProps, ref } from 'vue';
 
-  defineProps<{ msg: string }>()
+  defineProps<{ msg: string }>();
 
-  const count = ref(0)
+  const count = ref(0);
 </script>
 
 <template>
@@ -47,9 +47,9 @@
   }
 
   code {
-    background-color: #eee;
     padding: 2px 4px;
-    border-radius: 4px;
     color: #304455;
+    background-color: #eee;
+    border-radius: 4px;
   }
 </style>

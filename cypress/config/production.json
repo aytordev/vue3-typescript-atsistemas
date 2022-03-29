@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://production.example.com",
+    "env": {
+      "env": "production",
+      "apiUrl": "https://production-api.com/api/v1"
+    }
+  }

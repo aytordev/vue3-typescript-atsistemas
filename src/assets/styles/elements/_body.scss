@@ -2,11 +2,9 @@
 
 body {
   min-height: 100vh;
-  color: var(--text-color);
   font-size: variables.$font-body;
   font-family: variables.$font-family;
   text-align: center;
-  background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

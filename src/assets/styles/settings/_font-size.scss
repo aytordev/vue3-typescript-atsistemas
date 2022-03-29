@@ -16,3 +16,5 @@ $_font-size-32: math.div(32, $_font-size-unit) + rem; // 2 rem
 $_font-size-40: math.div(40, $_font-size-unit) + rem; // 2.5 rem
 $_font-size-48: math.div(48, $_font-size-unit) + rem; // 3 rem
 $_font-size-64: math.div(64, $_font-size-unit) + rem; // 4 rem
+
+$font-body: $_font-size-14;

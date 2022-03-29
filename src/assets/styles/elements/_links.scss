@@ -1,0 +1,13 @@
+@use "../settings/variables";
+@use "../tools/mixins";
+
+a {
+  color: mixins.color(black, 500);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: mixins.color(black, 500);
+    text-decoration: underline;
+  }
+}

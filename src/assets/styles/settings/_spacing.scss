@@ -1,0 +1,25 @@
+@use "sass:math";
+
+$_space-between-unit: 16 !default;
+
+$space-0: 0 + rem; // 0 rem
+
+$space-1: math.div(1, $_space-between-unit) + rem; // 0,0625 rem
+$space-2: math.div(2, $_space-between-unit) + rem; // 0,125 rem
+$space-3: math.div(3, $_space-between-unit) + rem; // 0,1875 rem
+$space-4: math.div(4, $_space-between-unit) + rem; // 0,25 rem
+$space-6: math.div(6, $_space-between-unit) + rem; // 0,375 rem
+$space-8: math.div(8, $_space-between-unit) + rem; // 0,5 rem
+$space-12: math.div(12, $_space-between-unit) + rem; // 0,75 rem
+$space-16: math.div(16, $_space-between-unit) + rem; // 1 rem
+$space-18: math.div(18, $_space-between-unit) + rem; // 1.125 rem
+$space-20: math.div(20, $_space-between-unit) + rem; // 1.25 rem
+$space-24: math.div(24, $_space-between-unit) + rem; // 1.5 rem
+$space-32: math.div(32, $_space-between-unit) + rem; // 2 rem
+$space-48: math.div(48, $_space-between-unit) + rem; // 3 rem
+$space-56: math.div(56, $_space-between-unit) + rem; // 3.5 rem
+$space-64: math.div(64, $_space-between-unit) + rem; // 4 rem
+$space-96: math.div(96, $_space-between-unit) + rem; // 6 rem
+$space-128: math.div(128, $_space-between-unit) + rem; // 8 rem
+$space-160: math.div(160, $_space-between-unit) + rem; // 10 rem
+$space-256: math.div(256, $_space-between-unit) + rem; // 16 rem

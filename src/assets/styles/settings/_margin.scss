@@ -1,0 +1,19 @@
+@use "sass:math";
+
+$_margin-unit: 16 !default;
+
+$margin-0: 0 + rem; // 0 rem
+
+$margin-1: math.div(1, $_margin-unit) + rem; // 0,0625 rem
+$margin-2: math.div(2, $_margin-unit) + rem; // 0,125 rem
+$margin-3: math.div(3, $_margin-unit) + rem; // 0,1875 rem
+$margin-4: math.div(4, $_margin-unit) + rem; // 0,25 rem
+$margin-6: math.div(6, $_margin-unit) + rem; // 0,375 rem
+$margin-8: math.div(8, $_margin-unit) + rem; // 0,5 rem
+$margin-16: math.div(16, $_margin-unit) + rem; // 1 rem
+$margin-32: math.div(32, $_margin-unit) + rem; // 2 rem
+$margin-48: math.div(48, $_margin-unit) + rem; // 3 rem
+$margin-64: math.div(64, $_margin-unit) + rem; // 4 rem
+$margin-96: math.div(96, $_margin-unit) + rem; // 6 rem
+$margin-128: math.div(128, $_margin-unit) + rem; // 8 rem
+$margin-256: math.div(256, $_margin-unit) + rem; // 16 rem

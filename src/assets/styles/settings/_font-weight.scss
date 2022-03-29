@@ -1,0 +1,12 @@
+// Typography weight
+$_font-weight-unit: 400;
+
+$_thin: 0.25 * $_font-weight-unit;
+$_extralight: 0.5 * $_font-weight-unit;
+$_light: 0.75 * $_font-weight-unit;
+$_regular: $_font-weight-unit;
+$_medium: 1.25 * $_font-weight-unit;
+$_semibold: 1.5 * $_font-weight-unit;
+$_bold: 1.75 * $_font-weight-unit;
+$_extrabold: 2 * $_font-weight-unit;
+$_black: 2.25 * $_font-weight-unit;

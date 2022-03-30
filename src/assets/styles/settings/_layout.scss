@@ -1,0 +1,26 @@
+$_height-unit: 100 !default;
+$_width-unit: 100 !default;
+
+// Height scale
+$height-100: $_height-unit + vh;
+$height-90: 0.9 * $_height-unit + vh;
+$height-80: 0.8 * $_height-unit + vh;
+$height-70: 0.7 * $_height-unit + vh;
+$height-60: 0.6 * $_height-unit + vh;
+$height-50: 0.5 * $_height-unit + vh;
+$height-40: 0.4 * $_height-unit + vh;
+$height-30: 0.3 * $_height-unit + vh;
+$height-20: 0.2 * $_height-unit + vh;
+$height-10: 0.1 * $_height-unit + vh;
+
+// Width scale
+$width-100: $_width-unit + vw;
+$width-90: 0.9 * $_width-unit + vw;
+$width-80: 0.8 * $_width-unit + vw;
+$width-70: 0.7 * $_width-unit + vw;
+$width-60: 0.6 * $_width-unit + vw;
+$width-50: 0.5 * $_width-unit + vw;
+$width-40: 0.4 * $_width-unit + vw;
+$width-30: 0.3 * $_width-unit + vw;
+$width-20: 0.2 * $_width-unit + vw;
+$width-10: 0.1 * $_width-unit + vw;

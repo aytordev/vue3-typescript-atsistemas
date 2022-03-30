@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+$_padding-unit: 16 !default;
+$padding-0: 0 + rem; // 0 rem
+
+$padding-1: math.div(1, $_padding-unit) + rem; // 0,0625 rem
+$padding-2: math.div(2, $_padding-unit) + rem; // 0,125 rem
+$padding-3: math.div(3, $_padding-unit) + rem; // 0,1875 rem
+$padding-4: math.div(4, $_padding-unit) + rem; // 0,25 rem
+$padding-6: math.div(6, $_padding-unit) + rem; // 0,375 rem
+$padding-8: math.div(8, $_padding-unit) + rem; // 0,5 rem
+$padding-16: math.div(16, $_padding-unit) + rem; // 1 rem
+$padding-20: math.div(20, $_padding-unit) + rem; // 1.25 rem
+$padding-32: math.div(32, $_padding-unit) + rem; // 2 rem
+$padding-48: math.div(48, $_padding-unit) + rem; // 3 rem
+$padding-64: math.div(64, $_padding-unit) + rem; // 4 rem
+$padding-96: math.div(96, $_padding-unit) + rem; // 6 rem
+$padding-128: math.div(128, $_padding-unit) + rem; // 8 rem
+$padding-256: math.div(256, $_padding-unit) + rem; // 16 rem

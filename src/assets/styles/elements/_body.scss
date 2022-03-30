@@ -1,0 +1,10 @@
+@use '../settings/variables';
+
+body {
+  min-height: 100vh;
+  font-family: variables.$font-family;
+  font-size: variables.$font-body;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

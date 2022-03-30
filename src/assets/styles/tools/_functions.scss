@@ -1,0 +1,18 @@
+@use '../settings/variables';
+
+@function color($color, $tone) {
+  @if map-has-key(variables.$pallete, $color) {
+    $color: map-get(variables.$pallete, $color);
+
+    @if map-has-key($color, $tone) {
+      $tone: map-get($color, $tone);
+      @return $tone;
+    }
+
+    @warn "Tone `#{$tone}` not found in `#{$color}`";
+    @return null;
+  }
+
+  @warn "Color `#{$color}` not found in palette";
+  @return null;
+}

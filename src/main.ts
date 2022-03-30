@@ -1,4 +1,5 @@
 import App from '@/App.vue';
+import '@/assets/styles/index.scss';
 import i18n from '@/locale';
 import router from '@/router';
 import store from '@/store';

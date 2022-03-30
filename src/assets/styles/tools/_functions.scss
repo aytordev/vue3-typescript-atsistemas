@@ -1,4 +1,4 @@
-@use "../settings/variables";
+@use '../settings/variables';
 
 @function color($color, $tone) {
   @if map-has-key(variables.$pallete, $color) {

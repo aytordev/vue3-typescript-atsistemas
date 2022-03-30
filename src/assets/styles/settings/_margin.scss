@@ -1,7 +1,6 @@
-@use "sass:math";
+@use 'sass:math';
 
 $_margin-unit: 16 !default;
-
 $margin-0: 0 + rem; // 0 rem
 
 $margin-1: math.div(1, $_margin-unit) + rem; // 0,0625 rem

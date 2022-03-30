@@ -7,7 +7,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore . --fix && prettier -w -u . && stylelint \"./src/**/*.vue\" \"./src/**/*.scss\" --fix && vue-tsc --noEmit",
-    "test:unit": "jest src",
+    "test:unit": "jest src --silent",
     "cy:open": "cypress open",
     "cy:local": "cypress run --env configFile=local",
     "cy:development": "cypress run --env configFile=development",

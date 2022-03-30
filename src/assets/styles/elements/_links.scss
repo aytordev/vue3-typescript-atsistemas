@@ -1,5 +1,5 @@
-@use "../settings/variables";
-@use "../tools/mixins";
+@use '../settings/variables';
+@use '../tools/mixins';
 
 a {
   color: mixins.color(black, 500);

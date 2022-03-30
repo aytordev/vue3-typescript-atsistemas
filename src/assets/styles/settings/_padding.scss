@@ -1,7 +1,6 @@
-@use "sass:math";
+@use 'sass:math';
 
 $_padding-unit: 16 !default;
-
 $padding-0: 0 + rem; // 0 rem
 
 $padding-1: math.div(1, $_padding-unit) + rem; // 0,0625 rem

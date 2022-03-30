@@ -1,7 +1,6 @@
-@use "sass:math";
+@use 'sass:math';
 
 $_space-between-unit: 16 !default;
-
 $space-0: 0 + rem; // 0 rem
 
 $space-1: math.div(1, $_space-between-unit) + rem; // 0,0625 rem

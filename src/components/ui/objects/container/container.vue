@@ -23,7 +23,7 @@
 
   .container {
     max-width: variables.$width-100;
-    margin: 0 auto;
     padding: variables.$space-16 variables.$space-32;
+    margin: 0 auto;
   }
 </style>

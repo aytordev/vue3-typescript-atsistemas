@@ -26,9 +26,10 @@
 </script>
 <style lang="scss">
   @use '@/src/assets/styles/settings/variables';
+
   .list {
-    margin: variables.$padding-0;
     padding: variables.$margin-0;
+    margin: variables.$padding-0;
     list-style: none;
 
     &--horizontal {

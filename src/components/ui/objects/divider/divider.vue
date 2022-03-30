@@ -22,17 +22,17 @@
 <style lang="scss" scoped>
   .divider {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
     background-color: var(--text-color);
 
     &--horizontal {
       display: block;
-      clear: both;
       width: 100%;
       min-width: 100%;
       height: 1px;
       margin: 0;
+      clear: both;
     }
 
     &--vertical {

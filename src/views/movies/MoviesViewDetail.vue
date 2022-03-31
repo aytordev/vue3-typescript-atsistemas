@@ -7,8 +7,9 @@
   import { SCREEN_TYPE, useScreenType } from '@/composables/layout/screen-size';
   import Tag from '@/components/ui/atoms/Tag/Tag.vue';
   import Button from '@/components/ui/atoms/Button/Button.vue';
-
   import { Colors } from '@/models/enums/colors';
+  import { delMovies } from '@/api/routes/movies';
+  import router from '@/router';
 
   export default defineComponent({
     name: 'FilmsViewDetail',
@@ -23,11 +24,29 @@
       const route = useRoute();
       const screenType = useScreenType();
 
+      async function deleteMovie(id: string) {
+        try {
+          await delMovies(id);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      function redirectToEditMovie() {
+        try {
+          router.push({ name: 'edit-movie', params: route.params });
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
       return {
         route,
         screenType,
         SCREEN_TYPE,
         Colors,
+        deleteMovie,
+        redirectToEditMovie,
       };
     },
   });
@@ -42,6 +61,9 @@
         : 'wrapper--mobile'
     "
   >
+    <List :horizontal="true" class="wrapper__info">
+      <span>{{ route.params.title }}</span>
+    </List>
     <img :src="(route.params.poster as string)" class="wrapper__image" />
     <List :horizontal="true" class="wrapper__info">
       <span>Puntuacion</span>
@@ -77,8 +99,14 @@
       </span>
     </div>
     <List horizontal class="actions">
-      <Button :type="Colors.PRIMARY">Editar</Button>
-      <Button :type="Colors.WARNING">Borrar</Button>
+      <Button :type="Colors.PRIMARY" @click="redirectToEditMovie"
+        >Editar</Button
+      >
+      <Button
+        :type="Colors.WARNING"
+        @click="deleteMovie(route.params.id as string)"
+        >Borrar</Button
+      >
     </List>
   </Container>
 </template>

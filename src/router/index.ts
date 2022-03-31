@@ -6,9 +6,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'Home',
     component: () =>
-      import(
-        /* webpackChunkName: "about" */ '../views/movies/MoviesViewDetail.vue'
-      ),
+      import(/* webpackChunkName: "about" */ '../views/Home.vue'),
   },
   {
     path: '/movies',
@@ -22,6 +20,22 @@ const routes: Array<RouteRecordRaw> = [
     component: () =>
       import(
         /* webpackChunkName: "about" */ '../views/movies/MoviesViewDetail.vue'
+      ),
+  },
+  {
+    path: '/movies/new',
+    name: 'new-movie',
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ '../views/movies/NewMoviesView.vue'
+      ),
+  },
+  {
+    path: '/movies/details/edit',
+    name: 'edit-movie',
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ '../views/movies/EditMoviesView.vue'
       ),
   },
 ];

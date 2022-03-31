@@ -11,7 +11,7 @@
   import router from '@/router';
 
   export default defineComponent({
-    name: 'FilmsView',
+    name: 'MoviesView',
     components: {
       Card,
       Container,

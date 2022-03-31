@@ -1,5 +1,6 @@
 export default {
-  path: '/',
-  name: 'home',
+  path: '/movies',
+  name: 'movies',
   component: () => import('@/views/movies/MoviesView.vue'),
+  default: true,
 };

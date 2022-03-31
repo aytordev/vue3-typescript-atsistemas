@@ -12,13 +12,13 @@
 
 <template>
   <Navbar />
-  <router-view style="min-height: 100%; padding-top: 3rem"></router-view>
+  <router-view style="min-height: 100%; padding-top: 5rem"></router-view>
 </template>
 
 <style lang="scss">
   @use './src/assets/styles/settings/variables.scss';
 
   #app {
-    height: calc(variables.$height-100 - 3rem);
+    height: calc(variables.$height-100 - 5rem);
   }
 </style>

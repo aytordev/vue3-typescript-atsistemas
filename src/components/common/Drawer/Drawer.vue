@@ -66,13 +66,13 @@
         <div class="drawer__body__options" aria-label="linkslist">
           <router-link
             class="drawer__body__options__option"
-            to="/"
+            to="/movies"
             @click.self="maskClick"
             >Películas</router-link
           >
           <router-link
             class="drawer__body__options__option"
-            to="/"
+            to="/movies/details"
             @click.self="maskClick"
             >Actores</router-link
           >

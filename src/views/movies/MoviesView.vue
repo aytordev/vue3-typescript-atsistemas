@@ -8,9 +8,10 @@
   import { SCREEN_TYPE, useScreenType } from '@/composables/layout/screen-size';
   import Container from '@/components/ui/objects/Container/Container.vue';
   import Skeleton from '@/components/ui/molecules/Skeleton/Skeleton.vue';
+  import router from '@/router';
 
   export default defineComponent({
-    name: 'FilmsView',
+    name: 'MoviesView',
     components: {
       Card,
       Container,
@@ -30,6 +31,17 @@
         listOfMovies.value = await fetchMovies();
         setMoviesState(listOfMovies.value);
       });
+
+      function redirectToMovieDetails(movie: Movies) {
+        const selectedMovie = JSON.parse(JSON.stringify(movie));
+        console.log(selectedMovie);
+        try {
+          router.push({ name: 'movie-details', params: selectedMovie });
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
       return {
         movie,
         screenType,
@@ -39,6 +51,7 @@
             ? listOfMovies.value.slice(0, 4)
             : listOfMovies.value
         ),
+        redirectToMovieDetails,
       };
     },
   });
@@ -55,7 +68,12 @@
       "
       style="--columns: 6"
     >
-      <Card v-for="movie in movies" :key="movie" :item="movie" />
+      <Card
+        v-for="movie in movies"
+        :key="movie"
+        :item="movie"
+        @click="redirectToMovieDetails(movie)"
+      />
     </Container>
   </div>
   <div v-else>

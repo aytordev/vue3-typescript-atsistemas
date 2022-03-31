@@ -20,11 +20,12 @@
 </template>
 
 <style lang="scss" scoped>
+  @use './src/assets/styles/tools/mixins';
   .divider {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: var(--text-color);
+    background-color: mixins.color(black, 500);
 
     &--horizontal {
       display: block;

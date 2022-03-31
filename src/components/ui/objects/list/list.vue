@@ -25,7 +25,7 @@
   });
 </script>
 <style lang="scss">
-  @use '@/src/assets/styles/settings/variables';
+  @use '@/assets/styles/settings/variables';
 
   .list {
     padding: variables.$margin-0;

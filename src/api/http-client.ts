@@ -12,6 +12,7 @@ enum StatusCode {
   Forbidden = 403,
   TooManyRequests = 429,
   InternalServerError = 500,
+  NotFound = 404,
 }
 
 const headers: Readonly<Record<string, string>> = {
@@ -20,7 +21,7 @@ const headers: Readonly<Record<string, string>> = {
 };
 
 const http = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'http://localhost:3001',
   headers,
 });
 
@@ -44,6 +45,10 @@ http.interceptors.response.use(
       }
       case StatusCode.TooManyRequests: {
         // Handle TooManyRequests
+        break;
+      }
+      case StatusCode.NotFound: {
+        // Handle NotFound
         break;
       }
     }

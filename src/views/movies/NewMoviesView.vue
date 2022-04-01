@@ -185,15 +185,15 @@
     &__info {
       display: flex;
       justify-content: space-between;
-      margin: 0.5rem 0;
+      margin: variables.$margin-4 0;
     }
 
     &__row {
       text-align: left;
-      margin: 1rem 0;
+      margin: variables.$margin-16 0;
 
       &__div {
-        margin: 0.5rem 0;
+        margin: variables.$margin-4s 0;
       }
     }
   }
@@ -202,6 +202,6 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 1rem;
+    margin: variables.$margin-16;
   }
 </style>

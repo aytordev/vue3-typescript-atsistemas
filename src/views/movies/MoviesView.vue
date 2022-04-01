@@ -109,11 +109,11 @@
   .catalog {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: variables.$margin-48;
     align-content: space-evenly;
     align-items: center;
     justify-items: center;
     max-width: calc(var(--columns) * (14rem + 3rem));
-    margin: 1rem 0 1rem 0;
+    margin: variables.$margin-16 0 variables.$margin-16 0;
   }
 </style>

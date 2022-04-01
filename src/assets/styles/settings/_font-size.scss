@@ -18,3 +18,6 @@ $_font-size-64: math.div(64, $_font-size-unit) + rem; // 4 rem
 
 $font-body: $_font-size-14;
 $font-button: $_font-size-14;
+$font-input: $_font-size-14;
+$font-input-label: $_font-size-14;
+$font-input-message: $_font-size-12;

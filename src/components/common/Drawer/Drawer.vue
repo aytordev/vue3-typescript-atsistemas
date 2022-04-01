@@ -61,26 +61,14 @@
         :style="{ width }"
       >
         <div class="drawer__body__menu">
-          <span>Menu</span>
+          <span>{{ $t('menu') }}</span>
         </div>
         <div class="drawer__body__options" aria-label="linkslist">
           <router-link
             class="drawer__body__options__option"
             to="/movies"
             @click.self="maskClick"
-            >Películas</router-link
-          >
-          <router-link
-            class="drawer__body__options__option"
-            to="/movies/details"
-            @click.self="maskClick"
-            >Actores</router-link
-          >
-          <router-link
-            class="drawer__body__options__option"
-            to="/"
-            @click.self="maskClick"
-            >Estudios</router-link
+            >{{ $t('movies') }}</router-link
           >
         </div>
       </div>

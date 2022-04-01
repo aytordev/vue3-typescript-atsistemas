@@ -56,7 +56,7 @@
   >
     <form @submit.prevent="editMovie">
       <div class="wrapper__row">
-        <span>Titulo</span>
+        <span>{{ $t('title') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           :model-value="movie.title"
@@ -68,7 +68,7 @@
       </div>
 
       <div class="wrapper__row">
-        <span>Poster</span>
+        <span>{{ $t('poster') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           :model-value="movie.poster"
@@ -80,7 +80,7 @@
       </div>
 
       <div class="wrapper__row">
-        <span>Generos</span>
+        <span>{{ $t('genre') }}</span>
         <Divider class="wrapper__row__div" />
         <Input @keyup.enter="(event) => movie.genre.push(event.target.value)" />
 
@@ -90,7 +90,7 @@
       </div>
 
       <div class="wrapper__row">
-        <span>Actores</span>
+        <span>{{ $t('actors') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           @keyup.enter="(event) => movie.actors.push(event.target.value)"
@@ -102,19 +102,7 @@
       </div>
 
       <div class="wrapper__row">
-        <span>Estudios</span>
-        <Divider class="wrapper__row__div" />
-        <Input
-          @keyup.enter="(event) => movie.companies.push(event.target.value)"
-        />
-
-        <span v-for="company in movie.companies">
-          <Tag :type="Colors.SUCCESS" filled>{{ company }}</Tag>
-        </span>
-      </div>
-
-      <div class="wrapper__row">
-        <span>Año</span>
+        <span>{{ $t('year') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           :model-value="movie.year"
@@ -127,7 +115,7 @@
       </div>
 
       <div class="wrapper__row">
-        <span>Duracion</span>
+        <span>{{ $t('duration') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           :model-value="movie.duration"
@@ -140,7 +128,7 @@
       </div>
 
       <div class="wrapper__row">
-        <span>Puntuacion</span>
+        <span>{{ $t('score') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           :model-value="movie.imdbRating"

@@ -69,8 +69,8 @@
     overflow: hidden;
     border: variables.$space-2 solid mixins.color(black, 500);
     border-radius: variables.$space-16;
-    height: 27rem;
     width: 22rem;
+    height: 40rem;
 
     &__thumbnail {
       display: flex;
@@ -99,9 +99,10 @@
 
       &__genres {
         display: flex;
+        flex-wrap: wrap;
         justify-content: start;
         width: inherit;
-        margin-left: 3rem;
+        margin: 0 1rem;
       }
     }
   }

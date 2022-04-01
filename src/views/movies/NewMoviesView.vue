@@ -193,7 +193,7 @@
       margin: variables.$margin-16 0;
 
       &__div {
-        margin: variables.$margin-4s 0;
+        margin: variables.$margin-48 0;
       }
     }
   }

@@ -106,10 +106,12 @@
 </template>
 
 <style lang="scss" scoped>
+  @use './src/assets/styles/settings/variables.scss';
+
   .catalog {
     display: flex;
     flex-wrap: wrap;
-    gap: variables.$margin-48;
+    gap: variables.$space-48;
     align-content: space-evenly;
     align-items: center;
     justify-items: center;

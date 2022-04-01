@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <Container>Hola</Container>
+  <Container></Container>
 </template>
 
 <style lang="scss" scoped></style>

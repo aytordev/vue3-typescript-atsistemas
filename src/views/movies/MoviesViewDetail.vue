@@ -66,8 +66,8 @@
     </List>
     <img :src="(route.params.poster as string)" class="wrapper__image" />
     <List :horizontal="true" class="wrapper__info">
-      <span>Puntuacion</span>
-      <span>Duracion</span>
+      <span>{{ $t('score') }}</span>
+      <span>{{ $t('duration') }}</span>
     </List>
 
     <List :horizontal="true" class="wrapper__info">
@@ -76,7 +76,7 @@
     </List>
 
     <div class="wrapper__row">
-      <span>Actores</span>
+      <span>{{ $t('actors') }}</span>
       <Divider class="wrapper__row__div" />
       <span v-for="actor in route.params.actors">
         <Tag :type="Colors.SUCCESS" filled>{{ actor }}</Tag>
@@ -84,28 +84,24 @@
     </div>
 
     <div class="wrapper__row">
-      <span>Estudios</span>
-      <Divider class="wrapper__row__div" />
-      <span v-for="company in route.params.companies">
-        <Tag :type="Colors.SUCCESS" filled>{{ company }}</Tag>
-      </span>
-    </div>
-
-    <div class="wrapper__row">
-      <span>Generos</span>
+      <span>{{ $t('genres') }}</span>
       <Divider class="wrapper__row__div" />
       <span v-for="gen in route.params.genre">
         <Tag :type="Colors.SUCCESS" filled>{{ gen }}</Tag>
       </span>
     </div>
     <List horizontal class="actions">
-      <Button :type="Colors.PRIMARY" @click="redirectToEditMovie"
-        >Editar</Button
+      <Button
+        :type="Colors.PRIMARY"
+        aria-label="edit"
+        @click="redirectToEditMovie"
+        >{{ $t('edit') }}s</Button
       >
       <Button
         :type="Colors.WARNING"
+        aria-label="delete"
         @click="deleteMovie(route.params.id as string)"
-        >Borrar</Button
+        >{{ $t('delete') }}</Button
       >
     </List>
   </Container>

@@ -1,3 +1,15 @@
 export default {
-  hello: 'Hola mundo!',
+  movies: 'Peliculas',
+  menu: 'Menu',
+  newMovie: 'Nueva pelicula',
+  title: 'Titulo',
+  poster: 'Poster',
+  score: 'Puntuacion',
+  duration: 'Duracion',
+  actors: 'Actores',
+  companies: 'Estudios',
+  genre: 'Generos',
+  new: 'Nueva',
+  delete: 'Borrar',
+  edit: 'Editar',
 };

@@ -9,6 +9,9 @@
   import Container from '@/components/ui/objects/Container/Container.vue';
   import Skeleton from '@/components/ui/molecules/Skeleton/Skeleton.vue';
   import router from '@/router';
+  import List from '@/components/ui/objects/list/list.vue';
+  import { Colors } from '@/models/enums/colors';
+  import Button from '@/components/ui/atoms/Button/Button.vue';
 
   export default defineComponent({
     name: 'MoviesView',
@@ -16,6 +19,8 @@
       Card,
       Container,
       Skeleton,
+      List,
+      Button,
     },
     setup() {
       const screenType = useScreenType();
@@ -52,6 +57,7 @@
             : listOfMovies.value
         ),
         redirectToMovieDetails,
+        Colors,
       };
     },
   });
@@ -59,6 +65,14 @@
 
 <template>
   <div v-if="movies.length > 0">
+    <List horizontal class="actions">
+      <Button
+        :type="Colors.PRIMARY"
+        aria-label="new"
+        @click="$router.push({ name: 'new-movie' })"
+        >{{ $t('newMovie') }}</Button
+      >
+    </List>
     <Container
       class="catalog"
       :style="
@@ -72,6 +86,7 @@
         v-for="movie in movies"
         :key="movie"
         :item="movie"
+        aria-label="movie-details"
         @click="redirectToMovieDetails(movie)"
       />
     </Container>

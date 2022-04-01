@@ -56,31 +56,33 @@
   >
     <form @submit.prevent="editMovie">
       <div class="wrapper__row">
-        <span>Titulo</span>
+        <span>{{ $t('title') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           :model-value="movie.title"
           :message="movie.title ? '' : 'Este campo no puede estar vacío'"
           :status="movie.title.length === 0 ? Colors.DANGER : undefined"
           required
+          aria-label="title"
           @input="(event) => (movie.title = event.target.value)"
         />
       </div>
 
       <div class="wrapper__row">
-        <span>Poster</span>
+        <span>{{ $t('poster') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           :model-value="movie.poster"
           :message="movie.poster ? '' : 'Este campo no puede estar vacío'"
           :status="movie.poster.length === 0 ? Colors.DANGER : undefined"
           required
+          aria-label="poster"
           @input="(event) => (movie.poster = event.target.value)"
         />
       </div>
 
       <div class="wrapper__row">
-        <span>Generos</span>
+        <span>{{ $t('genre') }}</span>
         <Divider class="wrapper__row__div" />
         <Input @keyup.enter="(event) => movie.genre.push(event.target.value)" />
 
@@ -90,7 +92,7 @@
       </div>
 
       <div class="wrapper__row">
-        <span>Actores</span>
+        <span>{{ $t('actors') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           @keyup.enter="(event) => movie.actors.push(event.target.value)"
@@ -102,19 +104,7 @@
       </div>
 
       <div class="wrapper__row">
-        <span>Estudios</span>
-        <Divider class="wrapper__row__div" />
-        <Input
-          @keyup.enter="(event) => movie.companies.push(event.target.value)"
-        />
-
-        <span v-for="company in movie.companies">
-          <Tag :type="Colors.SUCCESS" filled>{{ company }}</Tag>
-        </span>
-      </div>
-
-      <div class="wrapper__row">
-        <span>Año</span>
+        <span>{{ $t('year') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           :model-value="movie.year"
@@ -122,12 +112,13 @@
           :message="movie.year ? '' : 'Este campo no puede estar vacío'"
           :status="!movie.year ? Colors.DANGER : undefined"
           required
+          aria-label="year"
           @input="(event) => (movie.year = event.target.value)"
         />
       </div>
 
       <div class="wrapper__row">
-        <span>Duracion</span>
+        <span>{{ $t('duration') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           :model-value="movie.duration"
@@ -135,12 +126,13 @@
           :message="movie.duration ? '' : 'Este campo no puede estar vacío'"
           :status="!movie.duration ? Colors.DANGER : undefined"
           required
+          aria-label="duration"
           @input="(event) => (movie.duration = event.target.value)"
         />
       </div>
 
       <div class="wrapper__row">
-        <span>Puntuacion</span>
+        <span>{{ $t('score') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           :model-value="movie.imdbRating"
@@ -150,11 +142,12 @@
           type="number"
           step="any"
           min="0"
+          aria-label="score"
           @input="(event) => (movie.imdbRating = event.target.value)"
         />
       </div>
 
-      <Button :type="Colors.PRIMARY">Editar</Button>
+      <Button :type="Colors.PRIMARY" aria-label="edit">Editar</Button>
     </form>
   </Container>
 </template>

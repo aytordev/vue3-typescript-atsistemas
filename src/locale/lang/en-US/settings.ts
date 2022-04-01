@@ -1,3 +1,16 @@
 export default {
-  hello: 'Hello world!',
+  movies: 'Movies',
+  menu: 'Menu',
+  newMovie: 'New movie',
+  title: 'Title',
+  poster: 'Poster',
+  score: 'IMDB Rating',
+  duration: 'Duration',
+  actors: 'Actors',
+  companies: 'Companies',
+  year: 'year',
+  genre: 'Genres',
+  new: 'New',
+  delete: 'Delete',
+  edit: 'Edit',
 };

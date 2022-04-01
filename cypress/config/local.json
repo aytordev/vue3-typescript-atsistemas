@@ -1,7 +1,7 @@
 {
-  "baseUrl": "http://localhost:3001",
+  "baseUrl": "http://localhost:3000",
   "env": {
     "env": "local",
-    "apiUrl": "https://local-api.com/api/v1"
+    "apiUrl": "http://localhost:3001"
   }
 }

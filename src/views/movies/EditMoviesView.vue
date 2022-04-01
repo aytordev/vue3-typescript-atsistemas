@@ -63,6 +63,7 @@
           :message="movie.title ? '' : 'Este campo no puede estar vacío'"
           :status="movie.title.length === 0 ? Colors.DANGER : undefined"
           required
+          aria-label="title"
           @input="(event) => (movie.title = event.target.value)"
         />
       </div>
@@ -75,6 +76,7 @@
           :message="movie.poster ? '' : 'Este campo no puede estar vacío'"
           :status="movie.poster.length === 0 ? Colors.DANGER : undefined"
           required
+          aria-label="poster"
           @input="(event) => (movie.poster = event.target.value)"
         />
       </div>
@@ -110,6 +112,7 @@
           :message="movie.year ? '' : 'Este campo no puede estar vacío'"
           :status="!movie.year ? Colors.DANGER : undefined"
           required
+          aria-label="year"
           @input="(event) => (movie.year = event.target.value)"
         />
       </div>
@@ -123,6 +126,7 @@
           :message="movie.duration ? '' : 'Este campo no puede estar vacío'"
           :status="!movie.duration ? Colors.DANGER : undefined"
           required
+          aria-label="duration"
           @input="(event) => (movie.duration = event.target.value)"
         />
       </div>
@@ -138,11 +142,12 @@
           type="number"
           step="any"
           min="0"
+          aria-label="score"
           @input="(event) => (movie.imdbRating = event.target.value)"
         />
       </div>
 
-      <Button :type="Colors.PRIMARY">Editar</Button>
+      <Button :type="Colors.PRIMARY" aria-label="edit">Editar</Button>
     </form>
   </Container>
 </template>

@@ -68,6 +68,7 @@
     <List horizontal class="actions">
       <Button
         :type="Colors.PRIMARY"
+        aria-label="new"
         @click="$router.push({ name: 'new-movie' })"
         >{{ $t('newMovie') }}</Button
       >
@@ -85,6 +86,7 @@
         v-for="movie in movies"
         :key="movie"
         :item="movie"
+        aria-label="movie-details"
         @click="redirectToMovieDetails(movie)"
       />
     </Container>

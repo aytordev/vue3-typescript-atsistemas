@@ -91,11 +91,15 @@
       </span>
     </div>
     <List horizontal class="actions">
-      <Button :type="Colors.PRIMARY" @click="redirectToEditMovie"
+      <Button
+        :type="Colors.PRIMARY"
+        aria-label="edit"
+        @click="redirectToEditMovie"
         >{{ $t('edit') }}s</Button
       >
       <Button
         :type="Colors.WARNING"
+        aria-label="delete"
         @click="deleteMovie(route.params.id as string)"
         >{{ $t('delete') }}</Button
       >

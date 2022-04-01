@@ -8,7 +8,7 @@
   import Button from '@/components/ui/atoms/Button/Button.vue';
   import { Colors } from '@/models/enums/colors';
   import Input from '@/components/ui/atoms/Input/Input.vue';
-  import { createMovie, updateMovie } from '@/api/routes/movies';
+  import { createMovie } from '@/api/routes/movies';
   import { Movies } from '@/models/types/movies';
 
   export default defineComponent({
@@ -72,6 +72,7 @@
           :message="movie.title ? '' : 'Este campo no puede estar vacío'"
           :status="movie.title.length === 0 ? Colors.DANGER : undefined"
           required
+          aria-label="title"
           @input="(event) => (movie.title = event.target.value)"
         />
       </div>
@@ -84,6 +85,7 @@
           :message="movie.poster ? '' : 'Este campo no puede estar vacío'"
           :status="movie.poster.length === 0 ? Colors.DANGER : undefined"
           required
+          aria-label="poster"
           @input="(event) => (movie.poster = event.target.value)"
         />
       </div>
@@ -91,7 +93,10 @@
       <div class="wrapper__row">
         <span>{{ $t('genres') }}</span>
         <Divider class="wrapper__row__div" />
-        <Input @keyup.enter="(event) => movie.genre.push(event.target.value)" />
+        <Input
+          aria-label="genre"
+          @keyup.enter="(event) => movie.genre.push(event.target.value)"
+        />
 
         <span v-for="gen in movie.genre" :key="genre">
           <Tag :type="Colors.SUCCESS" filled>{{ gen }}</Tag>
@@ -102,6 +107,7 @@
         <span>{{ $t('actors') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
+          aria-label="actors"
           @keyup.enter="(event) => movie.actors.push(event.target.value)"
         />
 
@@ -114,6 +120,7 @@
         <span>{{ $t('year') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
+          aria-label="year"
           :model-value="movie.year"
           type="number"
           :message="movie.year ? '' : 'Este campo no puede estar vacío'"
@@ -127,6 +134,7 @@
         <span>{{ $t('duration') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
+          aria-label="duration"
           :model-value="movie.duration"
           type="number"
           :message="movie.duration ? '' : 'Este campo no puede estar vacío'"
@@ -140,6 +148,7 @@
         <span>{{ $t('score') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
+          aria-label="score"
           :model-value="movie.imdbRating"
           :message="movie.imdbRating ? '' : 'Este campo no puede estar vacío'"
           :status="!movie.imdbRating ? Colors.DANGER : undefined"
@@ -151,7 +160,7 @@
         />
       </div>
 
-      <Button :type="Colors.PRIMARY">{{ $t('new') }}</Button>
+      <Button :type="Colors.PRIMARY" aria-label="new">{{ $t('new') }}</Button>
     </form>
   </Container>
 </template>

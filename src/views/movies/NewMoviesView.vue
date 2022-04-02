@@ -49,6 +49,7 @@
 
       return {
         route,
+        loading,
         movie,
         newMovie,
         screenType,
@@ -104,7 +105,7 @@
           @keyup.enter="(event) => movie.genre.push(event.target.value)"
         />
 
-        <span v-for="gen in movie.genre" :key="genre">
+        <span v-for="gen in movie.genre" :key="gen">
           <Tag :type="Colors.SUCCESS" filled>{{ gen }}</Tag>
         </span>
       </div>
@@ -117,7 +118,7 @@
           @keyup.enter="(event) => movie.actors.push(event.target.value)"
         />
 
-        <span v-for="actor in movie.actors">
+        <span v-for="actor in movie.actors" :key="actor">
           <Tag :type="Colors.SUCCESS" filled>{{ actor }}</Tag>
         </span>
       </div>

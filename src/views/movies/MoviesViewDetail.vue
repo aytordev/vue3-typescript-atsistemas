@@ -46,6 +46,7 @@
 
       return {
         route,
+        loading,
         screenType,
         SCREEN_TYPE,
         Colors,
@@ -82,7 +83,7 @@
     <div class="wrapper__row">
       <span>{{ $t('actors') }}</span>
       <Divider class="wrapper__row__div" />
-      <span v-for="actor in route.params.actors">
+      <span v-for="actor in route.params.actors" :key="actor">
         <Tag :type="Colors.SUCCESS" filled>{{ actor }}</Tag>
       </span>
     </div>
@@ -90,7 +91,7 @@
     <div class="wrapper__row">
       <span>{{ $t('genre') }}</span>
       <Divider class="wrapper__row__div" />
-      <span v-for="gen in route.params.genre">
+      <span v-for="gen in route.params.genre" :key="gen">
         <Tag :type="Colors.SUCCESS" filled>{{ gen }}</Tag>
       </span>
     </div>

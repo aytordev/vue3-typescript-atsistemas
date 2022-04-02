@@ -33,13 +33,20 @@
 
       const listOfMovies = ref<Movies[]>([]);
       onMounted(async () => {
-        listOfMovies.value = await fetchMovies();
+        editMovie();
         setMoviesState(listOfMovies.value);
       });
 
+      async function editMovie() {
+        try {
+          listOfMovies.value = await fetchMovies();
+        } catch (error) {
+          alert('Ha ocurrido un error');
+        }
+      }
+
       function redirectToMovieDetails(movie: Movies) {
         const selectedMovie = JSON.parse(JSON.stringify(movie));
-        console.log(selectedMovie);
         try {
           router.push({ name: 'movie-details', params: selectedMovie });
         } catch (error) {

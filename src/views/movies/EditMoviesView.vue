@@ -35,7 +35,7 @@
           router.push({ name: 'movies' });
           console.log(router);
         } catch (error) {
-          console.error(error);
+          alert(error);
         }
       }
 

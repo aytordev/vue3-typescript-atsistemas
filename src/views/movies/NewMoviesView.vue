@@ -43,7 +43,7 @@
           loading.value = false;
           router.push({ name: 'movies' });
         } catch (error) {
-          console.error(error);
+          alert('Ha ocurrido un error');
         }
       }
 

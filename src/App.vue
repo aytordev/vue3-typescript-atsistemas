@@ -12,7 +12,10 @@
 
 <template>
   <Navbar />
-  <router-view style="min-height: 100%; padding-top: 5rem"></router-view>
+  <router-view
+    :key="$route.fullPath"
+    style="min-height: 100%; padding-top: 5rem"
+  ></router-view>
 </template>
 
 <style lang="scss">

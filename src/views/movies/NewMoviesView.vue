@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { defineComponent, reactive } from 'vue';
+  import { defineComponent, reactive, ref } from 'vue';
   import { useRoute } from 'vue-router';
   import Container from '@/components/ui/objects/Container/Container.vue';
   import Divider from '@/components/ui/objects/divider/divider.vue';
@@ -10,6 +10,7 @@
   import Input from '@/components/ui/atoms/Input/Input.vue';
   import { createMovie } from '@/api/routes/movies';
   import { Movies } from '@/models/types/movies';
+  import router from '@/router';
 
   export default defineComponent({
     name: 'NewMovieView',
@@ -33,10 +34,14 @@
         duration: 0,
         imdbRating: 0,
       });
+      const loading = ref<boolean>(false);
 
       async function newMovie() {
         try {
+          loading.value = true;
           await createMovie(movie as Movies);
+          loading.value = false;
+          router.push({ name: 'movies' });
         } catch (error) {
           console.error(error);
         }
@@ -49,6 +54,7 @@
         screenType,
         SCREEN_TYPE,
         Colors,
+        loading,
       };
     },
   });
@@ -91,7 +97,7 @@
       </div>
 
       <div class="wrapper__row">
-        <span>{{ $t('genres') }}</span>
+        <span>{{ $t('genre') }}</span>
         <Divider class="wrapper__row__div" />
         <Input
           aria-label="genre"
@@ -160,7 +166,9 @@
         />
       </div>
 
-      <Button :type="Colors.PRIMARY" aria-label="new">{{ $t('new') }}</Button>
+      <Button :type="Colors.PRIMARY" aria-label="new" :loading="loading">{{
+        $t('new')
+      }}</Button>
     </form>
   </Container>
 </template>
@@ -193,7 +201,7 @@
       margin: variables.$margin-16 0;
 
       &__div {
-        margin: variables.$margin-48 0;
+        margin: variables.$margin-16 0;
       }
     }
   }

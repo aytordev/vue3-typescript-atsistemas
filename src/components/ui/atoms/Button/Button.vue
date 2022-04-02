@@ -19,6 +19,7 @@
       icon: { type: String, default: null },
       iconAfter: { type: Boolean, default: null },
       disabled: { type: Boolean },
+      loading: { type: Boolean, default: false },
     },
     setup(props, { slots }) {
       const classes = computed(() => [
@@ -43,9 +44,10 @@
 <template>
   <button :disabled="disabled" class="button" :class="classes">
     <img v-if="icon" :src="icon" alt="icon" class="button__icon" />
-    <span v-if="$slots.default" class="button__text">
+    <span v-if="$slots.default && !loading" class="button__text">
       <slot />
     </span>
+    <span v-if="loading"> Loading... </span>
   </button>
 </template>
 

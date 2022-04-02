@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { defineComponent } from 'vue';
+  import { defineComponent, ref } from 'vue';
   import { useRoute } from 'vue-router';
   import Container from '@/components/ui/objects/Container/Container.vue';
   import List from '@/components/ui/objects/list/list.vue';
@@ -23,10 +23,14 @@
     setup() {
       const route = useRoute();
       const screenType = useScreenType();
-
+      const loading = ref<boolean>(false);
       async function deleteMovie(id: string) {
         try {
+          loading.value = true;
           await delMovies(id);
+          loading.value = false;
+          router.push({ name: 'movies' });
+          console.log(router);
         } catch (error) {
           console.error(error);
         }
@@ -84,7 +88,7 @@
     </div>
 
     <div class="wrapper__row">
-      <span>{{ $t('genres') }}</span>
+      <span>{{ $t('genre') }}</span>
       <Divider class="wrapper__row__div" />
       <span v-for="gen in route.params.genre">
         <Tag :type="Colors.SUCCESS" filled>{{ gen }}</Tag>
@@ -100,6 +104,7 @@
       <Button
         :type="Colors.WARNING"
         aria-label="delete"
+        :loading="loading"
         @click="deleteMovie(route.params.id as string)"
         >{{ $t('delete') }}</Button
       >

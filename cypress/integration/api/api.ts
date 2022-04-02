@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 let newId;
 
-describe('employees API', () => {
+describe('Movies API', () => {
   it('verify request returns JSON', () => {
     cy.request('http://localhost:3001/movies')
       .its('headers')

@@ -9,6 +9,7 @@ export default {
   actors: 'Actores',
   companies: 'Estudios',
   genre: 'Generos',
+  year: 'Año',
   new: 'Nueva',
   delete: 'Borrar',
   edit: 'Editar',

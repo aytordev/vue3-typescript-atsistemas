@@ -8,7 +8,7 @@ export default {
   duration: 'Duration',
   actors: 'Actors',
   companies: 'Companies',
-  year: 'year',
+  year: 'Year',
   genre: 'Genres',
   new: 'New',
   delete: 'Delete',

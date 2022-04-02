@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { defineComponent, reactive } from 'vue';
+  import { defineComponent, reactive, ref } from 'vue';
   import { useRoute } from 'vue-router';
   import Container from '@/components/ui/objects/Container/Container.vue';
   import Divider from '@/components/ui/objects/divider/divider.vue';
@@ -10,6 +10,7 @@
   import Input from '@/components/ui/atoms/Input/Input.vue';
   import { updateMovie } from '@/api/routes/movies';
   import { Movies } from '@/models/types/movies';
+  import router from '@/router';
 
   export default defineComponent({
     name: 'EditMoviesView',
@@ -24,10 +25,15 @@
       const route = useRoute();
       const screenType = useScreenType();
       const movie = reactive<Movies>(route.params);
+      const loading = ref<boolean>(false);
 
       async function editMovie() {
         try {
+          loading.value = true;
           await updateMovie(movie as unknown as Movies);
+          loading.value = false;
+          router.push({ name: 'movies' });
+          console.log(router);
         } catch (error) {
           console.error(error);
         }
@@ -40,6 +46,7 @@
         screenType,
         SCREEN_TYPE,
         Colors,
+        loading,
       };
     },
   });
@@ -147,7 +154,9 @@
         />
       </div>
 
-      <Button :type="Colors.PRIMARY" aria-label="edit">Editar</Button>
+      <Button :type="Colors.PRIMARY" aria-label="edit" :loading="loading"
+        >Editar</Button
+      >
     </form>
   </Container>
 </template>

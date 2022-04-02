@@ -121,13 +121,14 @@
     &--mobile {
       width: inherit;
     }
+
     &--desktop {
       width: 30rem;
     }
 
     &__image {
-      height: 20rem;
       width: 30rem;
+      height: 20rem;
     }
 
     &__info {
@@ -137,8 +138,8 @@
     }
 
     &__row {
-      text-align: left;
       margin: variables.$margin-16 0;
+      text-align: left;
 
       &__div {
         margin: variables.$margin-4 0;
@@ -148,8 +149,8 @@
 
   .actions {
     position: absolute;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     margin: variables.$margin-16;
   }
 </style>

@@ -87,7 +87,9 @@
           ? 'justify-content: center'
           : 'justify-content: space-evenly'
       "
-      style="--columns: 6"
+      style="
+
+--columns: 6"
     >
       <Card
         v-for="movie in movies"
@@ -106,7 +108,9 @@
           ? 'justify-content: center'
           : 'justify-content: space-evenly'
       "
-      style="--columns: 6"
+      style="
+
+--columns: 6"
       ><Skeleton
     /></Container>
   </div>

@@ -60,30 +60,31 @@
     }
 
     &--filled {
-      background-color: $color;
       color: #fff;
+      background-color: $color;
     }
   }
+
   .tag {
     position: relative;
-    font-size: 12px;
-    line-height: 1;
-    display: inline-flex;
-    vertical-align: middle;
-    border: variables.$space-1 solid black;
     box-sizing: border-box;
-    border-radius: variables.$space-8;
-    font-weight: 500;
+    display: inline-flex;
     padding: variables.$padding-4 variables.$padding-8;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
     color: black;
+    vertical-align: middle;
     background-color: #fff;
+    border: variables.$space-1 solid black;
+    border-radius: variables.$space-8;
 
     &-close {
+      margin-left: variables.$margin-4;
       font-size: inherit;
       vertical-align: middle;
       cursor: pointer;
       user-select: none;
-      margin-left: variables.$margin-4;
     }
 
     &--primary {

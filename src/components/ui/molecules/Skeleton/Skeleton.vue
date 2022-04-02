@@ -24,45 +24,52 @@
     0% {
       background-color: #ddd;
     }
+
     50% {
       background-color: #d0d0d0;
     }
+
     100% {
       background-color: #ddd;
     }
   }
+
   .card {
     display: flex;
+    width: 22rem;
+    height: 27rem;
     overflow: hidden;
     border: variables.$space-2 solid mixins.color(black, 500);
     border-radius: variables.$space-16;
-    height: 27rem;
-    width: 22rem;
+
     &__skeleton {
       display: flex;
-      text-align: left;
       flex-direction: column;
       align-items: center;
       width: 100%;
+      text-align: left;
+
       &__title {
-        margin-top: 1rem;
         width: 80%;
         padding-top: 10%;
+        margin-top: 1rem;
         background-color: mixins.color(white, 900);
         animation: pulse-bg 1s infinite;
       }
+
       &__image {
-        margin-top: 1rem;
         width: 80%;
         height: 60%;
         padding-top: 10%;
+        margin-top: 1rem;
         background-color: mixins.color(white, 900);
         animation: pulse-bg 1s infinite;
       }
+
       &__info {
-        margin-top: 1rem;
         width: 80%;
         padding-top: 10%;
+        margin-top: 1rem;
         background-color: mixins.color(white, 900);
         animation: pulse-bg 1s infinite;
       }

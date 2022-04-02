@@ -66,35 +66,35 @@
 
   .card {
     display: flex;
+    width: 22rem;
+    height: 40rem;
     overflow: hidden;
     border: variables.$space-2 solid mixins.color(black, 500);
     border-radius: variables.$space-16;
-    width: 22rem;
-    height: 40rem;
 
     &__thumbnail {
       display: flex;
-      text-align: left;
       flex-direction: column;
       align-items: center;
       width: 100%;
+      text-align: left;
 
       &__title {
         align-self: auto;
-        font-size: 1.5rem;
         width: 20rem;
+        margin: 1rem;
         overflow: hidden;
+        font-size: 1.5rem;
         line-height: 1;
-        white-space: nowrap;
         text-overflow: ellipsis;
-        margin: 1rem 1rem 1rem 1rem;
+        white-space: nowrap;
       }
 
       &__image {
-        border-radius: variables.$space-16;
-        margin-bottom: 1rem;
         width: 90%;
         height: 75%;
+        margin-bottom: 1rem;
+        border-radius: variables.$space-16;
       }
 
       &__genres {

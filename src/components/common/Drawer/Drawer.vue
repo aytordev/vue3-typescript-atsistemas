@@ -126,8 +126,8 @@
       &__options {
         display: flex;
         flex-direction: column;
-        text-align: left;
         margin-left: variables.$space-16;
+        text-align: left;
 
         &__option {
           margin: variables.$space-16 0;

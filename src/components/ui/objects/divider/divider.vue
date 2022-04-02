@@ -21,6 +21,7 @@
 
 <style lang="scss" scoped>
   @use './src/assets/styles/tools/mixins';
+
   .divider {
     box-sizing: border-box;
     padding: 0;

@@ -73,8 +73,8 @@
   @use '@/assets/styles/tools/mixins';
 
   .input {
-    display: inline-block;
     box-sizing: border-box;
+    display: inline-block;
     width: 100%;
     height: 100%;
     padding: variables.$space-8 variables.$space-4;
@@ -98,8 +98,8 @@
   .label {
     display: block;
     margin-bottom: variables.$space-8;
-    color: var(--text-color);
     font-size: variables.$font-input-label;
+    color: var(--text-color);
     text-align: left;
   }
 
@@ -127,9 +127,9 @@
   }
 
   .wrapper {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
     width: 100%;
     height: 2rem;
     overflow: hidden;
@@ -137,7 +137,7 @@
     background-color: mixins.color(white, 500);
     border: 1px solid mixins.color(white, 700);
     border-radius: variables.$space-4;
-    box-shadow: 0 1px 1px rgba(211, 218, 230, 30%);
+    box-shadow: 0 1px 1px rgb(211 218 230 / 30%);
     transition: all 0.2s;
 
     &:hover {
@@ -156,9 +156,9 @@
 
     &--disabled,
     &--disabled:hover {
+      cursor: not-allowed;
       background: mixins.color(white, 700);
       border-color: mixins.color(blue, 300) !important;
-      cursor: not-allowed;
 
       .input:disabled {
         color: mixins.color(blue, 300);

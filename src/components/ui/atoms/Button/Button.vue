@@ -89,7 +89,7 @@
     font-weight: variables.$font-weight-button;
     line-height: 1;
     color: mixins.color(white, 500);
-    text-shadow: 0 variables.$space-1 0 rgb(mixins.color(black, 500), 0.07);
+    text-shadow: 0 variables.$space-1 0 rgba(mixins.color(black, 500), 0.07);
     cursor: pointer;
     user-select: none;
     border: 0;

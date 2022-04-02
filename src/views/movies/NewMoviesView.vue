@@ -55,7 +55,6 @@
         screenType,
         SCREEN_TYPE,
         Colors,
-        loading,
       };
     },
   });

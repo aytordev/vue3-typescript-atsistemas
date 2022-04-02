@@ -42,7 +42,6 @@
       return {
         route,
         movie,
-        genre,
         editMovie,
         screenType,
         SCREEN_TYPE,
